@@ -1,0 +1,12 @@
+controller_list:
+  - name: braccio_controller
+    action_ns: braccio_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+      - base
+      - shoulder
+      - elbow
+      - wrist_pitch
+      - wrist_roll
+  

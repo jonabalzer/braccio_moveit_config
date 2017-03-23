@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: braccio_description
+    relative_path: urdf/braccio.urdf
+  SRDF:
+    relative_path: config/visual.srdf
+  CONFIG:
+    author_name: Jonathan Balzer
+    author_email: jonathan.balzer@vathos.net
+    generated_timestamp: 1490277210
