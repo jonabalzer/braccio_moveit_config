@@ -7,23 +7,24 @@
   <arg name="sim" default="true" />
   <arg name="robot_ip" unless="$(arg sim)" />
   
-
-
   <!-- load the robot_description parameter before launching ROS-I nodes -->
   <include file="$(find braccio_moveit_config)/launch/planning_context.launch" >
     <arg name="load_robot_description" value="true" />
   </include>
 
   <!-- run the robot simulator and action interface nodes -->
-  <group if="$(arg sim)">
+  <group>
     <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" />
-    <rosparam param="initial_joint_state">[ 0, 1.57, 1.57, 1.57, 0 ]</rosparam>
+    <rosparam param="initial_joint_state">[ 0.0, 0.7853981633974483, 3.141592653589793, 0.0, 3.141592653589793 ]</rosparam>
   </group>
 
-  <!-- run the "real robot" interface nodes -->
-  <!--   - this typically includes: robot_state, motion_interface, and joint_trajectory_action nodes -->
-  <!--   - replace these calls with appropriate robot-specific calls or launch files -->
-  
+  <!-- establish serial communication with the Arduino board -->
+  <group unless="$(arg sim)">
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_node">
+    <param name="port" value="/dev/ttyACM0"/>
+    <param name="baud" value="115200"/>
+  </node>
+  </group>
 
   <!-- publish the robot state (tf transforms) -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />

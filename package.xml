@@ -1,5 +1,4 @@
 <package>
-
   <name>braccio_moveit_config</name>
   <version>0.3.0</version>
   <description>
@@ -7,15 +6,11 @@
   </description>
   <author email="jonathan.balzer@vathos.net">Jonathan Balzer</author>
   <maintainer email="jonathan.balzer@vathos.net">Jonathan Balzer</maintainer>
-
-  <license>BSD</license>
-
+  <license>MIT</license>
   <url type="website">http://moveit.ros.org/</url>
   <url type="bugtracker">https://github.com/ros-planning/moveit/issues</url>
   <url type="repository">https://github.com/ros-planning/moveit</url>
-
   <buildtool_depend>catkin</buildtool_depend>
-
   <run_depend>moveit_ros_move_group</run_depend>
   <run_depend>moveit_kinematics</run_depend>
   <run_depend>moveit_planners_ompl</run_depend>
@@ -27,6 +22,6 @@
   <!-- <run_depend>warehouse_ros_mongo</run_depend> -->
   <build_depend>braccio_description</build_depend>
   <run_depend>braccio_description</run_depend>
-
-
+  <run_depend>industrial_robot_simulator</run_depend>
+  <run_depend>braccio_driver</run_depend>
 </package>
