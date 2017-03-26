@@ -29,14 +29,10 @@
   <!-- publish the robot state (tf transforms) -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
-  <include file="$(find braccio_moveit_config)/launch/move_group.launch">
-
-  </include>
+  <include file="$(find braccio_moveit_config)/launch/move_group.launch"></include>
 
   <include file="$(find braccio_moveit_config)/launch/moveit_rviz.launch">
     <arg name="config" value="true"/>
   </include>
   
-  <include file="$(find braccio_moveit_config)/launch/default_warehouse_db.launch" />
-
 </launch>
