@@ -14,8 +14,7 @@
   <!-- run the robot simulator and action interface nodes, this is OK, we just listen to joint states on Arduino -->
   <group>
     <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" />
-    <!--<rosparam param="initial_joint_state">[ 0.0, 0.7853981633974483, 3.141592653589793, 0.0, 3.141592653589793 ]</rosparam>-->
-    <rosparam param="initial_joint_state">[ 1.5707963267948966, 1.5707963267948966, 1.5707963267948966, 1.5707963267948966, 0 ]</rosparam>
+    <rosparam param="initial_joint_state">[ 1.5707963267948966, 1.5707963267948966, 1.5707963267948966, 1.5707963267948966, 3.14159 ]</rosparam>
   </group>
 
   <!-- establish serial communication with the Arduino board -->

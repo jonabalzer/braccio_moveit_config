@@ -4,26 +4,31 @@
 joint_limits:
   base:
     has_velocity_limits: true
-    max_velocity: 4.0
+    max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
   elbow:
     has_velocity_limits: true
-    max_velocity: 4.0
+    max_velocity: 4
+    has_acceleration_limits: false
+    max_acceleration: 0
+  gripper_movable:
+    has_velocity_limits: true
+    max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
   shoulder:
     has_velocity_limits: true
-    max_velocity: 4.0
+    max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
   wrist_pitch:
     has_velocity_limits: true
-    max_velocity: 4.0
+    max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0
   wrist_roll:
     has_velocity_limits: true
-    max_velocity: 4.0
+    max_velocity: 4
     has_acceleration_limits: false
     max_acceleration: 0

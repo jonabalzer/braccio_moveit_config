@@ -8,4 +8,4 @@ controller_list:
       - wrist_roll
   - name: fake_gripper_group_controller
     joints:
-      []
+      - gripper_movable
